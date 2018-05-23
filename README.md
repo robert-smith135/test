@@ -29,30 +29,6 @@ docker run --rm -v `pwd`:/usr/local/bbc -t cypress-test:latest bash -lc "cypress
 ## Fig redirect
 We block all requests to the fig redirect route in the cyprss.config file to stop redirects from international locations. This redirect happens as part of the CI process because the jenkins server is in Ireland
 
-## Tag Release
-This repo includes a node script to tag cosmos releases with test results.
-This can be found at `/scripts/tagRelease.js`
-
-```bash
-npm run tagRelease --buildnumber=586 testnumber=12 --result=pass --certpath=/Users/smithr122/certs/passwordless.p12
-```
-
-This script takes a number of parameters if you are running the script locally:
-
-1. buildnumber - buildnumber of the local news component renderer
-2. testnumber - buildnumber of the e2e test repo, used to build a link back to the test run
-3. result - should be 'pass', 'fail' or 'info'
-4. devcertpath - path to your passwordless devcert, eg '/Users/smithr122/certs/passwordless.p12'
-
-There are additional parameters we pass in when running as part of a jenkins job:
-
-5. cosmoscertpath
-6. cosmoskeypath
-
-When running in jenkins we use the provied keys instead of using a devcert
-
-## Cosmos tagging API
-https://api.live.bbc.co.uk/cosmos/docs/rest_api_v1/endpoints.deployments.html#create-a-new-label-for-a-deployment
 
 ## Cypress enviroment variables
 We can pass in enviorment variables into cypress by suing the --env parameter when running cypress:
