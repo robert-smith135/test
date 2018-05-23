@@ -1,0 +1,24 @@
+{
+    "name": "e2e-tests",
+    "description": "",
+    "version": "2.0.0",
+    "config": {
+        "source": "resources/js/scripts.js"
+    },
+    "scripts": {
+        "cypress:open": "cypress open",
+        "cypress:run": "cypress run",
+        "tagRelease": "node ./scripts/tagRelease.js",
+        "test": "node ./scripts/test.js",
+        "lint": "eslint ./cypress/integration --fix "
+    },
+    "repository": {
+        "type": "git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "dependencies": {
+        "cypress": "^2.1.0"
+    }
+}

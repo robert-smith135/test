@@ -1,0 +1,10 @@
+{
+    "chromeWebSecurity": false,
+    "failOnStatusCode": false,
+    "trashAssetsBeforeHeadlessRuns": true,
+    "blacklistHosts": ["fig.bbc.co.uk", "ssl.bbc.co.uk"],
+    "responseTimeout": 120000,
+    "pageLoadTimeout": 500000,
+    "defaultCommandTimeout": 30000,
+    "requestTimeout": 60000
+}
